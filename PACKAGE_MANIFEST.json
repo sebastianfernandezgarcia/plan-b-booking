@@ -1,0 +1,177 @@
+{
+  "format": 1,
+  "date": "2026-10-15",
+  "project": "Plan B Booking",
+  "status": "source-release-prepared",
+  "sourcePolicy": "Explicit allowlist; exact byte copies; no source transformations.",
+  "exclusions": [
+    ".env and credential backups",
+    ".data and all ledgers/lock files",
+    "artifacts and provider/browser evidence",
+    "node_modules",
+    "logs",
+    "browser state",
+    "model weights",
+    "internal CANDIDATURA.md dossier",
+    "workspace delivery drafts not explicitly included"
+  ],
+  "audit": {
+    "filesScanned": 24,
+    "candidateFindings": 0,
+    "reviewedSyntheticFixtureLocations": [
+      {
+        "file": "test/booking.test.mjs",
+        "line": 119,
+        "rule": "credential-literal"
+      },
+      {
+        "file": "test/booking.test.mjs",
+        "line": 126,
+        "rule": "credential-literal"
+      },
+      {
+        "file": "test/booking.test.mjs",
+        "line": 126,
+        "rule": "credential-literal"
+      },
+      {
+        "file": "test/payment-recovery.test.mjs",
+        "line": 25,
+        "rule": "credential-literal"
+      },
+      {
+        "file": "test/payment-recovery.test.mjs",
+        "line": 65,
+        "rule": "credential-literal"
+      },
+      {
+        "file": "test/payment-recovery.test.mjs",
+        "line": 65,
+        "rule": "credential-literal"
+      }
+    ],
+    "limitation": "Pattern checks reduce accidental disclosure; they are not proof that every possible secret or personal datum is absent."
+  },
+  "files": [
+    {
+      "path": ".env.example",
+      "bytes": 369,
+      "sha256": "328a3e23c7959f15c1d13a7493d1cf1779d636276b606c259f3fbd7316a67786"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 317,
+      "sha256": "383f1d5b97f0316bfe1d72aa5b0be1d9ea24a414362a4da55f64243e213e4eca"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1086,
+      "sha256": "b2e2014f672eabfc7952154682f8b9ffde8a1182af48c0385190f3427ebdf886"
+    },
+    {
+      "path": "README.md",
+      "bytes": 11209,
+      "sha256": "f16760a1d90d319e763901b8c6169d59cfe591c6cb7cfeebdab1d6db5336374a"
+    },
+    {
+      "path": "docs/DEMO_SCRIPT.md",
+      "bytes": 3121,
+      "sha256": "7feadd407b0c91a8046acc0f78a017f5004da2bdc835a640634f6c7a09137588"
+    },
+    {
+      "path": "docs/SANDBOX_RUNBOOK.md",
+      "bytes": 2795,
+      "sha256": "4381ce3cce0ef5b98a043524dc2e756bcf90cfb491fbf6dba615946d3cc85ff0"
+    },
+    {
+      "path": "docs/SOURCES.md",
+      "bytes": 3275,
+      "sha256": "622c18aee79737e3415ec9bb7fb3295c185fd6b84e7b146df7b4317f1c3d729a"
+    },
+    {
+      "path": "docs/TEST_EVIDENCE.md",
+      "bytes": 16604,
+      "sha256": "b405e65bd3c3c931516a8cfaac652a68cfc87112874d5d0ed47d96278b26d459"
+    },
+    {
+      "path": "lib/booking.mjs",
+      "bytes": 15111,
+      "sha256": "2321d24b379a4ca387bc428362271f7c31651308ee1fc21d3f776396ad91f3cb"
+    },
+    {
+      "path": "lib/finance.mjs",
+      "bytes": 1407,
+      "sha256": "a71f3a4e41bb01195b210f8a7064652e2e17bd2e4515bf52c4ee6bfd01447ad9"
+    },
+    {
+      "path": "lib/payments.mjs",
+      "bytes": 5143,
+      "sha256": "ceaa3a6dd6d953ada22d24ce35880139a98c29daacee418491ef3b4a70b13d10"
+    },
+    {
+      "path": "lib/planner.mjs",
+      "bytes": 13140,
+      "sha256": "74e22e67766a9162cf8d6e09e9b5e5c48134ff5512883cee778c0c7a2c2e143f"
+    },
+    {
+      "path": "lib/receipt.mjs",
+      "bytes": 8961,
+      "sha256": "fac4189e22d3cb1a8024d5ac874d43da3248ade13502c5f262428f0dc5b24fe6"
+    },
+    {
+      "path": "package.json",
+      "bytes": 288,
+      "sha256": "00830ff21c56a6a9efb8ed7d5d5fc088605d4a9fb6a5d0a92a834054e043c0b9"
+    },
+    {
+      "path": "public/app.js",
+      "bytes": 40045,
+      "sha256": "706b9f0022708e004435d9baf267f5251429f1deb9f5ab733e018127dea64a55"
+    },
+    {
+      "path": "public/index.html",
+      "bytes": 5253,
+      "sha256": "b0aadac0f60cb61bb9ded296e0b339b356de9809329cd3b18505284b2ac01d61"
+    },
+    {
+      "path": "public/style.css",
+      "bytes": 34849,
+      "sha256": "5b2f2d080849106088827cad4b6045ad7b8dae4860f4a37486059c20e640dcfa"
+    },
+    {
+      "path": "scripts/local-ai-smoke.mjs",
+      "bytes": 6552,
+      "sha256": "d04901c9935c122a84af5e9fa972dbac10638cdf2fda41ca3d3ef23bba287d77"
+    },
+    {
+      "path": "scripts/readiness.mjs",
+      "bytes": 2178,
+      "sha256": "ce4eb13fdc95666b2ab631daa99c60fbaa031dec913f2e8acf75dcb848b89c73"
+    },
+    {
+      "path": "server.mjs",
+      "bytes": 5965,
+      "sha256": "1409c0362b7c60f720e97fa58488b8046762706d202a90b955baede8f0afb411"
+    },
+    {
+      "path": "test/booking.test.mjs",
+      "bytes": 15021,
+      "sha256": "5b7c64d216fdfb8dd30eeed6a30365263de8acf1135d20b174657cda2db1cbf4"
+    },
+    {
+      "path": "test/payment-recovery.test.mjs",
+      "bytes": 12296,
+      "sha256": "d190ad713694f2ea6b2fb4aec2f0994620cb1069e47c205b65ce37e7e065942a"
+    },
+    {
+      "path": "test/planner-requirements.test.mjs",
+      "bytes": 13409,
+      "sha256": "127ba206015e8786afdd9983680aed66074e7ac393b15b5c3b03a4e8cd336012"
+    },
+    {
+      "path": "test/receipt.test.mjs",
+      "bytes": 4375,
+      "sha256": "b2455a425bd2f977b327efb497458bfc108f98acaf4367b73491807dea811276"
+    }
+  ]
+}

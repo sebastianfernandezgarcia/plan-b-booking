@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Plan B / Photography booking studio</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Booking navigation">
+      <a class="brand" href="/" aria-label="Plan B Photography booking studio"><span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i></span><span>PLAN B<span class="brand-sub">PHOTOGRAPHY STUDIO</span></span></a>
+      <button class="new-booking" data-ui="new"><span aria-hidden="true">＋</span> New booking</button>
+      <div class="rail-heading"><span>YOUR BOOKINGS</span><span id="booking-count">0</span></div>
+      <label class="search-label" for="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a session" autocomplete="off"></label>
+      <div class="rail-filters" aria-label="Filter bookings"><button data-filter="all" class="selected" aria-pressed="true">All</button><button data-filter="active" aria-pressed="false">Active</button><button data-filter="closed" aria-pressed="false">Closed</button></div>
+      <nav id="booking-list" class="booking-list" aria-label="Saved sessions"></nav>
+      <div class="sidebar-bottom"><span class="connection-dot"></span><div><strong>Local workspace</strong><span>Changes saved on this device</span></div><span class="small-icon" aria-hidden="true">↳</span></div>
+    </aside>
+    <div class="main-shell">
+      <header class="topbar"><div class="breadcrumbs">Studio journal <span>/</span> <strong>Sessions & agreements</strong></div><div class="top-actions"><span id="mode" class="environment">Connecting…</span><button class="icon-button" data-ui="refresh" aria-label="Refresh bookings">↻</button><span class="avatar" aria-label="Local studio">PB</span></div></header>
+      <div class="context-bar" id="context">Loading payment and planner configuration…</div>
+      <div id="status" class="status-message" role="status" aria-live="polite" hidden></div>
+      <div id="error" class="error-message" role="alert" hidden></div>
+      <main id="workspace" tabindex="-1"></main>
+      <footer class="app-footer"><span>PLAN B / LOCAL PROTOTYPE</span><span>Synthetic sessions and conditions. Example policy. No real money.</span></footer>
+    </div>
+  </div>
+  <dialog id="new-dialog" aria-labelledby="new-title"><form id="brief-form"><div class="dialog-top"><span class="eyebrow">NEW SESSION REQUEST</span><button type="button" class="icon-button" data-ui="close-dialog" aria-label="Close new booking">×</button></div><h1 id="new-title">Start with the brief.</h1><p id="brief-intro" class="muted">Tell us what matters. Review the fit before making a commitment.</p><div id="starter-examples" class="starter-examples" aria-label="Example customer briefs"><button type="button" data-example="portrait">Coastal portraits</button><button type="button" data-example="family">Sheltered family session</button><button type="button" data-example="no-fit">A request that cannot fit</button></div><label for="session-name">Session name</label><input id="session-name" maxlength="80" required value="Weekend portraits" autocomplete="off"><label for="brief">What does the customer need?</label><textarea id="brief" rows="4" maxlength="1200" required>I would love a relaxed portrait session outdoors. Sunset on the coast is ideal, but a sheltered morning also works.</textarea><div class="form-row"><div><label for="day">First fixture date</label><input id="day" type="date" required></div><div class="date-help"><strong>Atlantic/Canary</strong><span>Options on this date and the next morning</span></div></div><fieldset class="constraint-fields"><legend>Requirements the session must meet</legend><div class="field-grid"><div><label for="request-time">Time of day</label><select id="request-time"><option value="any">Either time works</option><option value="morning">Morning only</option><option value="afternoon">Afternoon only</option></select></div><div><label for="request-shelter">Shelter</label><select id="request-shelter"><option value="any">Exposed or sheltered</option><option value="sheltered">Sheltered location only</option></select></div><div><label for="request-date">Only this date <span class="muted">(optional)</span></label><input id="request-date" type="date"></div></div><p class="input-hint">These are firm requirements, checked against every example session. Leave the date blank if either day works.</p></fieldset><div class="pricing-preview"><span>Example session<strong>€180.00</strong></span><span>Deposit<strong>€60.00</strong></span><span>Balance after deposit<strong>€120.00</strong></span></div><p class="small muted">The prototype does not collect the remaining balance. Availability and prices are example fixtures.</p><div class="dialog-actions"><button type="button" class="quiet" data-ui="close-dialog">Cancel</button><button id="create" class="primary" type="submit">Review session options <span aria-hidden="true">→</span></button></div><div id="dialog-error" class="form-error" role="alert" hidden></div></form></dialog>
+  <script type="module" src="/app.js"></script>
+</body></html>

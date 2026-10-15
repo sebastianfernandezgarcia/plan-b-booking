@@ -1,0 +1,14 @@
+# Local credentials and backups. Only the empty configuration template is public.
+.env*
+!.env.example
+*.pem
+*.key
+
+# Payment ledgers, local screenshots/receipts and provider evidence stay private.
+.data/
+artifacts/
+
+# Local tooling and operating-system files are not application source.
+node_modules/
+*.log
+.DS_Store
